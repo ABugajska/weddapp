@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Injectable }     from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
@@ -16,6 +16,9 @@ export class ListService {
     public getJSON(): Observable<any> {
         return this.http.get("./list.json")
             .map((res:any) => res.json())
+            .catch((error:any) => {console.log('error');
+            return Observable.of(undefined);
+        });
 
     }
 }
