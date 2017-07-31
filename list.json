@@ -1,0 +1,56 @@
+{
+  "peopleList": [
+    {
+      "person1": {
+        "name": "Marta",
+        "surname": "Kowalska",
+        "coming": true,
+        "partner": {
+          "coming": true,
+          "name": "Kamil",
+          "surname": "Kowalski"
+        }
+      },
+      "person2": {
+        "name": "Alicja",
+        "surname": "Kownacka",
+        "coming": false,
+        "partner": {
+          "coming": true,
+          "name": "Michal",
+          "surname": "Kownacki"
+        }
+      },
+      "person3": {
+        "name": "Katarzyna",
+        "surname": "Malodobra",
+        "coming": true,
+        "partner": {
+          "coming": false,
+          "name": "",
+          "surname": ""
+        }
+      },
+      "person4": {
+        "name": "Maria",
+        "surname": "Misiewicz",
+        "coming": false,
+        "partner": {
+          "coming": false,
+          "name": "",
+          "surname": ""
+        }
+      },
+      "person5": {
+        "name": "Weronika",
+        "surname": "Mazij",
+        "coming": true,
+        "partner": {
+          "coming": true,
+          "name": "Lukasz",
+          "surname": "Mazij"
+        }
+      }
+    }
+  ]
+}
