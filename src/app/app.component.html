@@ -1,20 +1,27 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <h3>Guests list</h3>
       <table class="table-bordered table">
         <thead>
           <tr>
             <th>Name</th>
             <th>Coming?</th>
+            <th>Partner</th>
+            <th>Partner's name</th>
             <th>Phone number</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let person of people">
-            <td>
-              {{person.name}}
-            </td>
-            <td>{{ person.isComing }}</td>
+            <td>{{person.name}}</td>
+
+            <td>{{ person.isComing ? 'Yes' : 'No' }}</td>
+            
+            <td> {{ person.partner.coming ? 'Yes' : 'No' }} </td>
+
+            <td *ngIf="person.partner.coming">{{person.partner.name}}</td>
+            <td *ngIf="!person.partner.coming">-</td>
 
             <td>{{ person.phone }}</td>
           </tr>
