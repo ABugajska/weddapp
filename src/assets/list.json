@@ -1,56 +1,65 @@
-{
-  "peopleList": [
-    {
-      "person1": {
-        "name": "Marta",
-        "surname": "Kowalska",
-        "coming": true,
-        "partner": {
-          "coming": true,
-          "name": "Kamil",
-          "surname": "Kowalski"
-        }
-      },
-      "person2": {
-        "name": "Alicja",
-        "surname": "Kownacka",
-        "coming": false,
-        "partner": {
-          "coming": true,
-          "name": "Michal",
-          "surname": "Kownacki"
-        }
-      },
-      "person3": {
-        "name": "Katarzyna",
-        "surname": "Malodobra",
-        "coming": true,
-        "partner": {
-          "coming": false,
-          "name": "",
-          "surname": ""
-        }
-      },
-      "person4": {
-        "name": "Maria",
-        "surname": "Misiewicz",
-        "coming": false,
-        "partner": {
-          "coming": false,
-          "name": "",
-          "surname": ""
-        }
-      },
-      "person5": {
-        "name": "Weronika",
-        "surname": "Mazij",
-        "coming": true,
-        "partner": {
-          "coming": true,
-          "name": "Lukasz",
-          "surname": "Mazij"
-        }
-      }
-    }
-  ]
-}
+[
+  {
+    "_id": "598d7c32c4924b1ec89c7556",
+    "isComing": true,
+    "picture": "http://placehold.it/32x32",
+    "name": "Beach Gaines",
+    "gender": "male",
+    "email": "beachgaines@lyria.com",
+    "phone": "+1 (878) 595-2881"
+  },
+  {
+    "_id": "598d7c32e768abe0912107f0",
+    "isComing": true,
+    "picture": "http://placehold.it/32x32",
+    "name": "Webster Bruce",
+    "gender": "male",
+    "email": "websterbruce@lyria.com",
+    "phone": "+1 (982) 478-2063"
+  },
+  {
+    "_id": "598d7c3217a91fd6ee3f9a3b",
+    "isComing": true,
+    "picture": "http://placehold.it/32x32",
+    "name": "Christina Baker",
+    "gender": "female",
+    "email": "christinabaker@lyria.com",
+    "phone": "+1 (923) 423-2359"
+  },
+  {
+    "_id": "598d7c32bcec088d5c505da5",
+    "isComing": true,
+    "picture": "http://placehold.it/32x32",
+    "name": "Silva Lara",
+    "gender": "male",
+    "email": "silvalara@lyria.com",
+    "phone": "+1 (989) 522-3424"
+  },
+  {
+    "_id": "598d7c32d724ed845e9bdc0d",
+    "isComing": false,
+    "picture": "http://placehold.it/32x32",
+    "name": "Essie Clements",
+    "gender": "female",
+    "email": "essieclements@lyria.com",
+    "phone": "+1 (990) 465-3449"
+  },
+  {
+    "_id": "598d7c32921e00e21419074b",
+    "isComing": false,
+    "picture": "http://placehold.it/32x32",
+    "name": "Hillary Colon",
+    "gender": "female",
+    "email": "hillarycolon@lyria.com",
+    "phone": "+1 (885) 523-3394"
+  },
+  {
+    "_id": "598d7c32faa4554e6063e4a1",
+    "isComing": false,
+    "picture": "http://placehold.it/32x32",
+    "name": "Cole Rivas",
+    "gender": "male",
+    "email": "colerivas@lyria.com",
+    "phone": "+1 (851) 500-3302"
+  }
+]

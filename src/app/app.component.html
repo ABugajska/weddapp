@@ -1,7 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      hello world
+      <ul>
+        <li *ngFor="let person of people">
+          {{person.name}}
+        </li>
+      </ul>
+
     </div>
   </div>
 </div>

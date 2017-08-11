@@ -9,9 +9,12 @@ import {ListService} from './list.service';
 
 
 export class AppComponent implements OnInit {
+  people: any;
   constructor(private listService: ListService) {}
   ngOnInit() {
-    this.listService.getData().subscribe((data) => { console.log("data:", data) })
-    
+    this.listService.getData().subscribe((people) => { 
+      console.log("people:", people);
+      this.people = people;
+    });
   }
 }
