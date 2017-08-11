@@ -13,15 +13,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let person of people">
+          <tr *ngFor="let person of people" [ngClass]="{ 'highlight': person.isComing && person.partner.coming }">
             <td>{{person.name}}</td>
 
-            <td>{{ person.isComing ? 'Yes' : 'No' }}</td>
+            <td [ngClass]="{'green' : person.isComing, 'red': !person.isComing  }">{{ person.isComing ? 'Yes' : 'No' }}</td>
             
-            <td> {{ person.partner.coming ? 'Yes' : 'No' }} </td>
+            <td [ngClass]="{'green' : person.partner.coming, 'red': !person.partner.coming  }"> {{ person.partner.coming ? 'Yes' : 'No' }} </td>
 
-            <td *ngIf="person.partner.coming">{{person.partner.name}}</td>
-            <td *ngIf="!person.partner.coming">-</td>
+            <td>{{ person.partner?.coming ? person.partner.name : '-' }}</td>
+
 
             <td>{{ person.phone }}</td>
           </tr>
