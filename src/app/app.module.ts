@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchFilterPipe } from './pipes/searchFilter';
-import { FilterByPipe } from './pipes/filterBy';
+import { FilterByPipe } from './pipes/filterByComing';
+import { FilterByPartnerPipe } from './pipes/filterByPartner';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
     AppComponent,
     SearchFilterPipe,
     FilterByPipe,
+    FilterByPartnerPipe,
     PeopleComponent,
     SearchComponent
   ],

@@ -13,12 +13,14 @@ export class AppComponent implements OnInit {
   people: Person[];
   name: string;
   isComing: boolean;
-
+  isPartnerComing: boolean;
   @Output() filterBy = new EventEmitter();
 
   onChange(ev) { 
     this.isComing = !this.isComing;
-    
+  }
+  comingWithPartner(ev) {
+    this.isPartnerComing = !this.isPartnerComing;
   }
   constructor(private listService: ListService) {}
   onSearch(name: string) {

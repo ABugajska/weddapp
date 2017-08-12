@@ -11,7 +11,6 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
   onChange(e) {
-    console.log(e);
     this.search.emit(e.target.value);
   }
 

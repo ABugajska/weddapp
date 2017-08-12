@@ -2,13 +2,18 @@
   <div class="row">
     <div class="col-md-12">
       <h3>Guests list</h3>
-      <label for="peopleComing">
-        <input id="peopleComing" type="checkbox" (click)="onChange($event)" class="btn">
-        people coming
-      </label>
+      
       
       <search (search)="onSearch($event)"></search>
-      <people-list [people]='people | searchFilter: name | filterBy: isComing'></people-list>
+      <label for="peopleComing">
+        <input id="peopleComing" type="checkbox" (change)="onChange($event)" class="btn">
+        people coming
+      </label>
+      <label for="personWithPartner">
+        <input id="personWithPartner" type="checkbox" class="btn" (change)="comingWithPartner($event)">
+        with partner
+      </label>
+      <people-list [people]='people | searchFilter: name | filterByComing: isComing | filterByPartner: isPartnerComing'></people-list>
       
 
     </div>
