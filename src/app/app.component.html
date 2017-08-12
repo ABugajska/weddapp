@@ -2,8 +2,13 @@
   <div class="row">
     <div class="col-md-12">
       <h3>Guests list</h3>
+      <label for="peopleComing">
+        <input id="peopleComing" type="checkbox" (click)="onChange($event)" class="btn">
+        people coming
+      </label>
+      
       <search (search)="onSearch($event)"></search>
-      <people-list [people]='people | searchFilter: name'></people-list>
+      <people-list [people]='people | searchFilter: name | filterBy: isComing'></people-list>
       
 
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {ListService} from './list.service';
 import {Person} from './models/person.interface';
 
@@ -12,6 +12,14 @@ import {Person} from './models/person.interface';
 export class AppComponent implements OnInit {
   people: Person[];
   name: string;
+  isComing: boolean;
+
+  @Output() filterBy = new EventEmitter();
+
+  onChange(ev) { 
+    this.isComing = !this.isComing;
+    
+  }
   constructor(private listService: ListService) {}
   onSearch(name: string) {
     this.name = name;
