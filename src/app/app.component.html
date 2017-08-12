@@ -2,32 +2,9 @@
   <div class="row">
     <div class="col-md-12">
       <h3>Guests list</h3>
-      <input type="text" name="personName" [(ngModel)]="personName">
-      <table class="table-bordered table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Coming?</th>
-            <th>Partner</th>
-            <th>Partner's name</th>
-            <th>Phone number</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let person of people | searchFilter: personName" [ngClass]="{ 'highlight': person.isComing && person.partner.coming }">
-            <td>{{person.name}}</td>
-
-            <td [ngClass]="{'green' : person.isComing, 'red': !person.isComing  }">{{ person.isComing ? 'Yes' : 'No' }}</td>
-            
-            <td [ngClass]="{'green' : person.partner.coming, 'red': !person.partner.coming  }"> {{ person.partner.coming ? 'Yes' : 'No' }} </td>
-
-            <td>{{ person.partner?.coming ? person.partner.name : '-' }}</td>
-
-
-            <td>{{ person.phone }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <search (search)="onSearch($event)"></search>
+      <people-list [people]='people | searchFilter: name'></people-list>
+      
 
     </div>
   </div>

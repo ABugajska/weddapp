@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListService } from './list.service';
+import { PeopleComponent } from './components/people/people.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -18,7 +20,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    PeopleComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

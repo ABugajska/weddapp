@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ListService} from './list.service';
+import {Person} from './models/person.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,12 @@ import {ListService} from './list.service';
 
 
 export class AppComponent implements OnInit {
-  people: any;
+  people: Person[];
+  name: string;
   constructor(private listService: ListService) {}
+  onSearch(name: string) {
+    this.name = name;
+  }
   ngOnInit() {
     this.listService.getData().subscribe((people) => { 
       console.log("people:", people);
