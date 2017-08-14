@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="addPersonForm" novalidate (submit)="onSubmit($event)">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label >Name</label>
+            <input id="name" formControlName="name" name="name" type="text" class="form-control">
+            <div *ngIf="addPersonForm.get('name').invalid && (addPersonForm.get('name').dirty || addPersonForm.get('name').touched)" class="alert alert-danger">
+              <div *ngIf="addPersonForm.get('name').errors?.required">
+                Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="">
+            <input formControlName="isComing" name="isComing" type="checkbox">
+            <label for="">
+              Coming?
+              
+            </label>
+            
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="" formGroupName="partner">
+            <div class="">
+              <input formControlName="coming" name="partnerComing" type="checkbox">
+              <label for="">
+                With partner?
+                
+              </label>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-md-6" formGroupName="partner">
+          <div class="form-group">
+            <label for="">Partner's name</label>
+            <input formControlName="name" name="partnersName" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Phone number</label>
+            <input formControlName="phone" name="personPhone" type="text" class="form-control">
+            <div *ngIf="addPersonForm.get('phone').invalid && (addPersonForm.get('phone').dirty || addPersonForm.get('phone').touched)" class="alert alert-danger">
+              <div *ngIf="addPersonForm.get('phone').errors?.required">
+                Phone is required
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small class="notification">*If You are NOT coming to the wedding, just write Your name and submit the form.</small>
+      <button class="primary-btn pull-right">Submit</button>
+    </form>
+  </div>
+</div>

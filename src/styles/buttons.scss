@@ -1,0 +1,17 @@
+@import '../styles/variables';
+
+.primary-btn {
+    background-color: $color-default-light;
+    border: 2px solid $light-pink;
+    color: $light-pink;
+    box-shadow: none;
+    padding: 5px 15px;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: $light-pink;
+        color: $color-default-light;
+    }
+
+}

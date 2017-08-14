@@ -1,14 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+$fa-font-path: "~font-awesome/fonts";
 
+@import './styles/variables';
 body {
     font-family: 'Open sans';
 }
-.red {
-    color: red;
-}
-.green {
-    color: green;
-}
-.highlight {
-    background-color: #f4f4f4;
+.mb {
+    margin-bottom: 10px;
 }
